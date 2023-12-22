@@ -31,8 +31,8 @@ const PopularGuest = () => {
         sx={{
           width: {
             md: "80%",
-            sm: "90%",
-            xs: "95%",
+            sm: "95%",
+            xs: "97%",
           },
           margin: "0 auto",
           bgcolor: "rgb(25, 25, 25, 0.5)",

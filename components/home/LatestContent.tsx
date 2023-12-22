@@ -19,7 +19,9 @@ const LatestContent = () => {
         >
           Latest Content
         </Typography>
-        <Box sx={{ width: "75%", margin: "0 auto", }}>
+        <Box sx={{ width: {
+          md: "75%", sm: '90%', xs: '90%'
+        }, margin: "0 auto", }}>
           <SliderSection />
         </Box>
         <Box sx={{ py: 4 }}>
