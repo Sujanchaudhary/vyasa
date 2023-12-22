@@ -157,8 +157,8 @@ export default function NavBar(props: Props) {
               boxSizing: "border-box",
               width: drawerWidth,
             },
-            "& .mui-4t3x6l-MuiPaper-root-MuiDrawer-paper": {
-              backgroundColor: "black",
+            "& .MuiPaper-root": {
+              bgcolor: "black",
             },
           }}
         >
