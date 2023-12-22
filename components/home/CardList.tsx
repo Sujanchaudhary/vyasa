@@ -29,7 +29,14 @@ const CardList = () => {
   ];
 
   return (
-    <div style={{ display: "flex", gap: "16px", justifyContent: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        gap: "16px",
+        justifyContent: "center",
+        flexWrap: "wrap",
+      }}
+    >
       {dummyData.map((data) => (
         <HomeCard key={data.id} {...data} />
       ))}

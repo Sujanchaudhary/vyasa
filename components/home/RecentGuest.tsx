@@ -9,7 +9,7 @@ const RecentGuest = () => {
       <Typography
         color="white"
         align="center"
-        sx={{ fontSize: "44px", fontWeight: "700", py:3 }}
+        sx={{ fontSize: "44px", fontWeight: "700", py: 3 }}
       >
         Recent Guest
       </Typography>
@@ -20,14 +20,33 @@ const RecentGuest = () => {
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
-          gap:3
+          gap: 3,
         }}
       >
-        <picture>
-          <img src="/amun.jpeg" alt="" />
+        <picture
+          style={{
+            maxWidth: "700px",
+            maxHeight: "500px",
+            overflow: "hidden",
+          }}
+        >
+          <img
+            src="/amun.jpeg"
+            alt=""
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "8px",
+              objectFit: "cover",
+            }}
+          />
         </picture>
-        <Typography sx={{fontSize:'22px', fontWeight:'700', color:'wheat'}}>Aman Thapa</Typography>
-        <Typography variant="subtitle2" color={'white'}>
+        <Typography
+          sx={{ fontSize: "22px", fontWeight: "700", color: "wheat" }}
+        >
+          Aman Thapa
+        </Typography>
+        <Typography variant="subtitle2" color={"white"}>
           Amun Thapa is the co-founder of SastoDeal.com, one of the most popular
           eCommerce sites in Nepal. He started SastoDeal from a rented garage in
           2011 and has never looked back since then. In 2014, he co-founded

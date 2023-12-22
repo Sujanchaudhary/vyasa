@@ -55,21 +55,34 @@ export default function NavBar(props: Props) {
   };
 
   const path = usePathname();
-  console.log(path);
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", bgcolor: "black" }}
+    >
+      <Typography variant="h6" sx={{ my: 2, color: "white" }}>
+        VYASA MEDIA NETWORK
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.text} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item.text} />
-            </ListItemButton>
-          </ListItem>
+          <Link
+            key={item.text}
+            href={item.link}
+            style={{ textDecoration: "none", }}
+          >
+            <ListItem disablePadding>
+              <ListItemButton
+                sx={{
+                  textAlign: "center",
+                  color: path === item.link ? "red" : "#fff",
+                }}
+              >
+                <ListItemText primary={item.text} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
@@ -89,7 +102,7 @@ export default function NavBar(props: Props) {
           bgcolor: "black",
           display: "flex",
           justifyContent: "center",
-          alignItems: 'center'
+          alignItems: "center",
         }}
       >
         <Toolbar sx={{ width: "80%", margin: "0 auto" }}>
@@ -118,8 +131,8 @@ export default function NavBar(props: Props) {
                   textDecoration: "none",
                   color: path === item.link ? "red" : "#fff",
                   borderBottom: path === item.link ? "1px solid red" : "",
-                  fontSize: '16px',
-                  fontWeight:'700'
+                  fontSize: "16px",
+                  fontWeight: "700",
                 }}
               >
                 {item.text}
@@ -143,6 +156,9 @@ export default function NavBar(props: Props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+            },
+            "& .mui-4t3x6l-MuiPaper-root-MuiDrawer-paper": {
+              backgroundColor: "black",
             },
           }}
         >

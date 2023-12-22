@@ -15,7 +15,11 @@ const PopularGuest = () => {
         backgroundImage: `url(${"https://source.unsplash.com/random"})`, // Replace with the path to your background image
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "100vh",
+        height: {
+            md: '100vh',
+            sm: '150vh',
+            xs: "160vh"
+        },
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
@@ -25,7 +29,11 @@ const PopularGuest = () => {
       {/* Left side with content and social media icons */}
       <Box
         sx={{
-          width: "80%",
+          width: {
+            md: "80%",
+            sm: "90%",
+            xs: "95%",
+          },
           margin: "0 auto",
           bgcolor: "rgb(25, 25, 25, 0.5)",
           p: 2,
@@ -38,6 +46,7 @@ const PopularGuest = () => {
                 padding: "20px",
                 borderRadius: "8px",
                 width: "100%",
+
                 display: "flex",
                 gap: 3,
                 flexDirection: "column",
@@ -94,8 +103,8 @@ const PopularGuest = () => {
             >
               <Box
                 sx={{
-                  width: "500px",
-                  height: "400px",
+                  maxWidth: "500px",
+                  maxHeight: "400px",
                 }}
               >
                 <picture>

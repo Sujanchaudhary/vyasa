@@ -7,12 +7,12 @@ const SocialMediaIcons = () => {
   return (
     <Box
       sx={{
-        display: "flex",
+        display: { md: "flex", sm: "none", xs: "none" },
         // justifyContent: 'space-between',
         width: "200px", // You can adjust the width according to your needs
         ml: 4,
         gap: 2,
-        mt:1
+        mt: 1,
       }}
     >
       <Link
